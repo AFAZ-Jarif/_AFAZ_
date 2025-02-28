@@ -12,7 +12,9 @@
       font-family: Arial, sans-serif;
     }
     body {
+      /* If the background image causes issues, try using a fallback background color */
       background: url('https://wallpapers.com/images/hd/spider-man-blue-3840-x-2400-wallpaper-2f9vy9i8gvynateu.jpg') no-repeat center center/cover;
+      background-color: #000; 
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -74,7 +76,7 @@
 </head>
 <body>
   <div class="nav">
-    <!-- Use a relative URL instead of a file:/// URL -->
+    <!-- Use a relative URL for your logo image -->
     <img src="phenix_logo.png" alt="Phenix Esports Logo">
     <div class="nav-links">
       <a href="home.html">Home</a>

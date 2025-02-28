@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout</title>
+  <style>
+    /* Global CSS Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      height: 100vh;
+      background: url('https://rog.asus.com/media/1672711969695.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 350px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .logout-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #6e3aff, #ff4fd8);
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .logout-btn:hover {
+      background: linear-gradient(135deg, #5d2fdd, #e83fd2);
+    }
+  </style>
+  <script>
+    function logout() {
+      // Remove login status from localStorage
+      localStorage.removeItem("loggedIn");
+      // Redirect to the login page
+      window.location.href = "login.html";
+    }
+    
+    // If user is not logged in, redirect to the login page immediately
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+<body>
+    <!-- Place this code snippet at the top of each HTML page, inside the <body> tag -->
+<div class="navbar">
+    <a href="login.html">Login</a>
+    <a href="home.html">Home</a>
+    <a href="support.html">Support</a>
+    <a href="freefire.html">Free Fire</a>
+    <a href="logout.html">Logout</a>
+  </div>
+  
+  <div class="container">
+    <h2>Are you sure you want to log out?</h2>
+    <button class="logout-btn" onclick="logout()">LOGOUT</button>
+  </div>
+</body>
+</html>
